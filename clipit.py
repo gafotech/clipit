@@ -685,6 +685,12 @@ def checkin(args, iter, losses):
     else:
         outfile = anim_output_files[cur_anim_index]
     img.save(outfile, pnginfo=info)
+
+    # Custom outfile
+    now = datetime.now()
+    date_time = now.strftime("%m-%d-%Y-%H-%M-%S")
+    img.save(date_time + ".png", pnginfo=info)
+
     if cur_anim_index == len(anim_output_files) - 1:
         # save gif
         gif_output = make_gif(args, iter)
