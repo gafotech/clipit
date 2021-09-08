@@ -8,6 +8,7 @@ import subprocess
 import glob
 from braceexpand import braceexpand
 from types import SimpleNamespace
+from datetime import date
 
 import os.path
 
